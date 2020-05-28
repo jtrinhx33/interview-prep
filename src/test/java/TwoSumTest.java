@@ -5,15 +5,35 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TwoSumTest extends TestCase {
-
-    protected int[] array1 = {1, 2};
     protected void setUp() {
 
     }
 
     @Test
     public void testEmpty() {
-        boolean result = TwoSum.twoSum(array1, 10);
-        assertEquals(result, false);
+        int[] array = {};
+        boolean result = TwoSum.twoSum(array, 10);
+        assertFalse(result);
+    }
+
+    @Test
+    public void testLengthOne() {
+        int[] array = {1};
+        boolean result = TwoSum.twoSum(array, 10);
+        assertFalse(result);
+    }
+
+    @Test
+    public void nonEmptyArrayHasAddends() {
+        int[] array = {3, 5, -4, 8, 11, 1, -1, 6};
+        boolean result = TwoSum.twoSum(array, 10);
+        assertTrue(result);
+    }
+
+    @Test
+    public void nonEmptyArrayDoesNotHaveAddends(){
+        int[] array = {3, 5, -4, 8, 11, 1, -1, 6};
+        boolean result = TwoSum.twoSum(array, 30);
+        assertFalse(result);
     }
 }
