@@ -1,10 +1,14 @@
+package DailyCodingProblem;
+
 import DailyCodingProblem.TwoSum;
 import junit.framework.TestCase;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class TwoSumTest extends TestCase {
+    @BeforeEach
     protected void setUp() {
 
     }
